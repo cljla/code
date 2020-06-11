@@ -1,8 +1,8 @@
 (ns asn-test
   (:require
     [clojure.test :refer :all]
-    [asn :refer :all]
-    ))
+    [asn :refer :all]))
+    
 
 
 (deftest main
@@ -14,4 +14,6 @@
     (is (ascending "444445")))
   (testing "123456"
     (is (ascending "123456")))
-  )
+  (testing "91011"
+    (is (ascending "91011"))))
+  
