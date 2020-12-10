@@ -1,0 +1,10 @@
+{
+ :aliases {:repl {:extra-deps {justone/cljdev {:git/url "https://github.com/justone/cljdev.git"
+                                               :sha "dc9171f9f091e476a734714d128704876c7fa679"}}
+                  :exec-fn cljdev.repl/start
+                  :main-opts  ["-m" "cljdev.repl"]}
+           :test {:extra-paths ["test"]
+                  :extra-deps {lambdaisland/kaocha {:mvn/version "1.0.629"}}
+                  :main-opts  ["-m" "kaocha.runner"]}}
+ :deps
+ {org.clojure/test.check {:mvn/version "1.0.0"}}}
