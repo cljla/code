@@ -2,3 +2,5 @@
 .nrepl-port
 .socket-port
 .rebel_readline_history
+.idea
+*.iml
