@@ -32,3 +32,21 @@ Create a function that takes two parameters, a list of the weights of each item 
 
 - {{Note1}
 - {{Note2}
+
+## Commands
+
+Run REPL
+```
+clojure -X:repl
+```
+
+Run tests once:
+```
+clojure -M:test
+```
+
+Run tests continuously:
+```
+clojure -M:test --watch
+```
+
