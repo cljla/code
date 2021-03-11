@@ -1,6 +1,6 @@
 (ns challenge-test
   (:require
-    [clojure.test :refer :all]
+    [clojure.test :refer [deftest testing is]]
     [challenge :refer [can-fit]]))
 
 
