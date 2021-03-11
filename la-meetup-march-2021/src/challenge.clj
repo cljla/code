@@ -36,9 +36,12 @@
   [weights num-bins]
   (loop [num-bins num-bins
          items-by-weight (group-by identity weights)]
-    (if (and (zero? num-bins)
-             (seq items-by-weight))
-      false
+    ; (println "bins:" num-bins)
+    ; (println "items:" (pr-str items-by-weight))
+    (if (zero? num-bins)
+      (if (seq items-by-weight)
+        false
+        true)
       (recur (dec num-bins) (fill-bin items-by-weight)))))
 
 #_(zero? nil)
@@ -46,7 +49,4 @@
 
 #_(can-fit [4 6 1 9 6 1 1 9 2 9] 5)
 #_(can-fit [4 4 4 4 4] 2)
-
-#_(if (< (* 10 num-bins) (apply + weights))
-    false
-    true)
+#_(can-fit [10 10] 3)
