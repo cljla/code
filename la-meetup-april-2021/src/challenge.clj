@@ -14,3 +14,15 @@
 
 (defn min-palindrome-steps [word]
   (helper word 0))
+
+(defn find-palindrome
+  "alternate solution"
+  [word]
+  (loop [steps       0
+         front-chars 0]
+    (if (true? (palindrome? (str word (str/reverse (subs word 0 front-chars)))))
+      steps
+      (recur (inc steps) (inc front-chars)))))
+
+
+
