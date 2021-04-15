@@ -2,8 +2,18 @@
   (:require
    [clojure.string :as str]))
 
-(defn palindrome? [word]
+(defn palindrome?-slow [word]
   (= word (str/reverse word)))
+
+(defn palindrome?
+  [word]
+  (let [len (count word)]
+    (loop [i 0]
+      (if (= (get word i) (get word (- len i 1)))
+        (if (< i len)
+          (recur (inc i))
+          true)
+        false))))
 
 (defn helper [word i]
   (let [prefix (subs word 0 i)
